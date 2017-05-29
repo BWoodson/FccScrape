@@ -1,0 +1,12 @@
+{
+  "test": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/FccScrapeTest",
+    "JWT_SECRET": "kjahdf823uin98ashc183892nsiuh"
+  },
+  "development": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/FccScrape",
+    "JWT_SECRET": "asunbjabscu238snnn1by23ibcyib"
+  }
+}
