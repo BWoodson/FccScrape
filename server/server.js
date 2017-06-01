@@ -21,7 +21,8 @@ app.get('/scrape/:id', (req, res) => {
       lastAlgorithm,
       lastAlgorithmDate,
       lastChallenge,
-      lastChallengeDate;
+      lastChallengeDate,
+      profileImageUrl;
     
     var json = {
       id,
@@ -31,7 +32,8 @@ app.get('/scrape/:id', (req, res) => {
       lastAlgorithm : "",
       lastAlgorithmDate : "",
       lastChallenge : "",
-      lastChallengeDate : ""
+      lastChallengeDate : "",
+      profileImageUrl : ""
     };
     
     request(url, function(err, resp, html) {
@@ -53,7 +55,9 @@ app.get('/scrape/:id', (req, res) => {
         
         json.lastChallenge = $('tbody').eq(2).find('tr').last().children().first().text();
         json.lastChallengeDate = $('tbody').eq(2).find('tr').last().children().eq(1).text();
-        
+
+        json.profileImageUrl = $(".public-profile-img").attr("src");
+
         return res.send(json);
       } else {
         console.log(err, resp.statusCode);
