@@ -1,14 +1,11 @@
 # FccScrape
-======
 A web scraper to pull some data from a users FreeCodeCamp profile.
 
 ## Prerequisites
-------
 * nodejs (developed using 6.10.3)
 * mongodb (developed using 3.4.4)
 
 ## Getting Setup
-------
 ```
 git clone https://github.com/BWoodson/FccScrape.git
 
@@ -26,6 +23,5 @@ npm start
 ```
 
 ## API
-------
 ### GET /scrape/:id
 Returns JSON of the profile
