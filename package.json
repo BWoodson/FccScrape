@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/**/*.test.js",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --timeout 20000 server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
   "engines": {
@@ -16,6 +16,8 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.1",
     "express": "^4.15.3",
+    "mongodb": "^2.2.28",
+    "mongoose": "^4.10.4",
     "request": "^2.81.0"
   },
   "devDependencies": {
