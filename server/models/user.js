@@ -16,7 +16,7 @@ var UserSchema = new mongoose.Schema({
   },
   profileImage: {
     type: String,
-    maxlength: 50
+    maxlength: 75
   },
   lastProject: {
     name: {
